@@ -23,5 +23,7 @@ public class IndexNoFound {
                 System.out.println(userInput + " is at index " + i);
             }
         }
+
+        System.out.println(userInput + " was not found!");
     }
 }
