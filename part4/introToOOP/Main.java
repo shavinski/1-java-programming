@@ -6,15 +6,33 @@ import part4.introToOOP.*;
 
 public class Main {
     public static void main(String[] args) {
-        Gauge g = new Gauge();
+        Statistics sumAll = new Statistics();
+        Statistics sumEven = new Statistics();
+        Statistics sumOdd = new Statistics();
 
-        while (!g.full()) {
-            System.out.println("Not full! Value: " + g.value());
-            g.increase();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter numbers, when finished type -1 to exit");
+
+        while(true) {
+            int input = scanner.nextInt();
+            
+            if (input == -1) {
+                break;
+            }
+
+            if (input % 2 == 0) {
+                sumEven.addNumber(input);
+            } else {
+                sumOdd.addNumber(input);
+            }
+
+            sumAll.addNumber(input);
         }
 
-        System.out.println("Full! Value: " + g.value());
-        g.decrease();
-        System.out.println("Not full! Value: " + g.value());
+        System.out.println("Sum: " + sumAll.sum());
+        System.out.println("Sum even: " + sumEven.sum());
+        System.out.println("Sum odd: " + sumOdd.sum());
+        
     }
 }
