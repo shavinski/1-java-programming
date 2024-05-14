@@ -21,4 +21,8 @@ public class Person {
             this.age = this.age + 1;
         }
     }
+
+    public int returnAge() {
+        return this.age;
+    }
 }

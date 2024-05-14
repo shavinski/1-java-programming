@@ -1,27 +1,23 @@
 package part4.introToOOP;
 
-import part4.introToOOP.Person;
-import part4.introToOOP.Whistle;
-import part4.introToOOP.Door;
-import part4.introToOOP.Product;
-import part4.introToOOP.DecreasingCounter;
-import part4.introToOOP.Debt;
+import java.util.Scanner;
+
+import part4.introToOOP.*;
 
 public class Main {
     public static void main(String[] args) {
-        Debt mortgage = new Debt(120000.0, 1.20);
-        mortgage.printBalance();
+        Film chipmunks = new Film("Alvin and the Chipmunks: The Squeakquel", 0);
 
-        mortgage.waitOneYear();
-        mortgage.printBalance();
+        Scanner reader = new Scanner(System.in);
 
-        int years = 0;
+        System.out.println("How old are you?");
+        int age = Integer.valueOf(reader.nextLine());
 
-        while (years < 20) {
-            mortgage.waitOneYear();
-            years = years + 1;
+        System.out.println();
+        if (age >= chipmunks.ageRating()) {
+            System.out.println("You may watch the film " + chipmunks.name());
+        } else {
+            System.out.println("You may not watch the film " + chipmunks.name());
         }
-
-        mortgage.printBalance();
     }
 }
