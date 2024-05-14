@@ -1,14 +1,16 @@
 package part4.introToOOP;
+
 import part4.introToOOP.Person;
+import part4.introToOOP.Whistle;
+
 
 public class Main {
     public static void main(String[] args) {
-        Person ada = new Person("Ada");
-        Person antti = new Person("Antti");
-        Person martin = new Person("Martin");
+        Whistle duckWhistle = new Whistle("Kvaak");
+        Whistle roosterWhistle = new Whistle("Peef");
 
-        ada.printPerson();
-        antti.printPerson();
-        martin.printPerson();
+        duckWhistle.sound();
+        roosterWhistle.sound();
+        duckWhistle.sound();
     }
 }
