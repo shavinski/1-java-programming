@@ -4,11 +4,18 @@ import part4.introToOOP.Person;
 import part4.introToOOP.Whistle;
 import part4.introToOOP.Door;
 import part4.introToOOP.Product;
+import part4.introToOOP.DecreasingCounter;
 
 public class Main {
     public static void main(String[] args) {
-       Product banana = new Product("Banana", 1.1, 13);
+        DecreasingCounter counter = new DecreasingCounter(100);
 
-       banana.printProduct();
+        counter.printValue();
+
+        counter.reset();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
     }
 }
