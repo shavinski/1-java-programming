@@ -1,4 +1,4 @@
-package part4.introToOOP;
+package part4.IntroToOOP;
 
 public class Debt {
     private double balance;
